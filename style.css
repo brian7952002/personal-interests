@@ -115,3 +115,38 @@ p {
     opacity: 1;
   }
 }
+
+/* Cuisine names. The name is wrapped in a span so that hovering a dish
+   does not also light up its cuisine -- a bare `.cuisines > li:hover`
+   fires for descendants too, so hovering "Pizza" would highlight
+   "American" as well. The span also keeps the nested list out of the
+   hover target, so the dish rule below stays put instead of jogging
+   sideways when the name shifts. */
+.cuisine {
+  position: relative;
+  display: inline-block;
+  transition: color .16s ease, padding-left .16s ease;
+}
+
+.cuisine::before {
+  content: "";
+  position: absolute;
+  left: 0;            /* lines up exactly above the dish rule below */
+  top: 0.15em;        /* inset to the text's cap height, not the line box */
+  bottom: 0.15em;
+  width: 2px;
+  background: #3a7ca5;
+  opacity: 0;
+  transition: opacity .16s ease;
+}
+
+@media (hover: hover) {
+  .cuisine:hover {
+    color: #3a7ca5;
+    padding-left: 0.35rem;
+  }
+
+  .cuisine:hover::before {
+    opacity: 1;
+  }
+}
