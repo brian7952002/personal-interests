@@ -82,3 +82,36 @@ p {
 .cuisines ul li {
   padding: 0.1rem 0;
 }
+
+/* Hover on the dishes. The li is positioned so the ::before can be laid
+   exactly over the parent ul's border, lighting up just that segment of
+   the rule -- reusing the motif rather than introducing a new one. */
+.cuisines ul li {
+  position: relative;
+  transition: color .16s ease, padding-left .16s ease;
+}
+
+.cuisines ul li::before {
+  content: "";
+  position: absolute;
+  left: calc(-0.9rem - 2px);   /* the ul's padding, plus its 2px border */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #3a7ca5;
+  opacity: 0;
+  transition: opacity .16s ease;
+}
+
+/* hover:hover keeps this off touch screens, where :hover can stick
+   after a tap and leave an item highlighted with no way to clear it. */
+@media (hover: hover) {
+  .cuisines ul li:hover {
+    color: #3a7ca5;
+    padding-left: 0.35rem;
+  }
+
+  .cuisines ul li:hover::before {
+    opacity: 1;
+  }
+}
