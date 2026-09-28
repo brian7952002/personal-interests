@@ -74,11 +74,22 @@
         100% { transform: scale(1.8); opacity: 0; }
       }
 
+      /* Ripples where the lure meets the water. These sit outside .guy so
+         they do not inherit his bob -- the water should not bounce along
+         with his stride. */
+      .lure-ring { animation: lure 2.4s ease-out infinite; opacity: 0; }
+      .lure-ring-b { animation-delay: 1.2s; }
+      @keyframes lure {
+        0%   { transform: scale(.3); opacity: .5; }
+        75%  { transform: scale(2);  opacity: 0;  }
+        100% { transform: scale(2);  opacity: 0;  }
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .walker, .facing, .fa, .fb, .guy, .rod,
-        .fish, .splash-a, .splash-b { animation: none; }
+        .fish, .splash-a, .splash-b, .lure-ring { animation: none; }
         .walker { transform: translateX(420px); }
-        .fb, .fish, .splash-a, .splash-b { opacity: 0; }
+        .fb, .fish, .splash-a, .splash-b, .lure-ring { opacity: 0; }
       }
     </style>
   </defs>
@@ -130,6 +141,10 @@
   <g transform="translate(0,288)">
     <g class="walker">
       <g class="facing">
+        <g transform="translate(31.5,-19)">
+          <g class="lure-ring"><ellipse rx="4" ry="1.3" fill="none" stroke="#a8cfe4" stroke-width=".9"/></g>
+          <g class="lure-ring lure-ring-b"><ellipse rx="4" ry="1.3" fill="none" stroke="#a8cfe4" stroke-width=".9"/></g>
+        </g>
         <g class="guy" fill="#a8cfe4" shape-rendering="crispEdges">
           <rect x="-3" y="-33" width="9"  height="6"/>
           <rect x="0"  y="-27" width="3"  height="3"/>
