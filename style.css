@@ -150,3 +150,30 @@ p {
     opacity: 1;
   }
 }
+
+/* Headings respond as one unit: the icon grows, the text takes the accent.
+   width: max-content shrinks the h2's box to its own text so the hover
+   target is the heading rather than the whole column -- and because the
+   box stays block-level, the margin collapsing that sets the heading
+   rhythm is untouched. max-width guards a heading longer than the column. */
+h2 {
+  width: max-content;
+  max-width: 100%;
+  transition: color .16s ease;
+}
+
+/* transform, not width/height: scaling is composited, so the icon grows
+   without reflowing the text beside it. */
+.icon {
+  transition: transform .18s ease;
+}
+
+@media (hover: hover) {
+  h2:hover {
+    color: #3a7ca5;
+  }
+
+  h2:hover .icon {
+    transform: scale(1.18);
+  }
+}
