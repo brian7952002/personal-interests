@@ -1,0 +1,22 @@
+# Line endings: store LF in the repo and check out LF in the working tree.
+# Without this, Git on Windows converts to CRLF on checkout, which shows up
+# later as diffs where every line looks changed.
+* text=auto eol=lf
+
+# Be explicit about the text files in this project.
+*.html text
+*.css  text
+*.js   text
+*.svg  text
+*.md   text
+*.json text
+
+# Binary: never convert line endings, never try to diff as text.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
