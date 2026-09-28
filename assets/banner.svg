@@ -35,7 +35,7 @@
       @keyframes flick { 0% { opacity: 1; } 50%, 100% { opacity: 0; } }
 
       /* Rod sways gently -- slower than the walk, so it reads as separate. */
-      .rod { animation: sway 2.6s ease-in-out infinite alternate; transform-origin: 9px -21px; }
+      .rod { animation: sway 2.6s ease-in-out infinite alternate; transform-origin: 9px -24px; }
       @keyframes sway {
         from { transform: rotate(-2deg);   }
         to   { transform: rotate(2.5deg); }
@@ -89,15 +89,15 @@
           <rect x="-6" y="-24" width="15" height="3"/>
           <rect x="-3" y="-21" width="9"  height="9"/>
           <g class="rod">
-            <rect x="9"  y="-21" width="3" height="3"/>
-            <rect x="12" y="-24" width="3" height="3"/>
-            <rect x="15" y="-27" width="3" height="3"/>
-            <rect x="18" y="-30" width="3" height="3"/>
-            <rect x="21" y="-33" width="3" height="3"/>
-            <rect x="24" y="-36" width="3" height="3"/>
-            <rect x="27" y="-39" width="3" height="3"/>
-            <path d="M28.5 -36 Q 33 -28 31.5 -21" fill="none" stroke="#a8cfe4" stroke-width="1" opacity=".7"/>
-            <rect x="30" y="-21" width="3" height="3" opacity=".85"/>
+            <rect x="9"  y="-24" width="3" height="3"/>
+            <rect x="12" y="-27" width="3" height="3"/>
+            <rect x="15" y="-30" width="3" height="3"/>
+            <rect x="18" y="-33" width="3" height="3"/>
+            <rect x="21" y="-36" width="3" height="3"/>
+            <rect x="24" y="-39" width="3" height="3"/>
+            <rect x="27" y="-42" width="3" height="3"/>
+            <path d="M28.5 -39 Q 33 -31 31.5 -24" fill="none" stroke="#a8cfe4" stroke-width="1" opacity=".7"/>
+            <rect x="30" y="-24" width="3" height="3" opacity=".85"/>
           </g>
           <g class="fa">
             <rect x="-3" y="-12" width="3" height="3"/>
