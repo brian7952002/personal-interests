@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="Layered water at dusk">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#122b3d"/>
+      <stop offset="55%"  stop-color="#2b5f80"/>
+      <stop offset="100%" stop-color="#3a7ca5"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#dceff9" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#dceff9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#sky)"/>
+
+  <g fill="#dceff9">
+    <circle cx="140" cy="58"  r="1.8" opacity="0.7"/>
+    <circle cx="255" cy="104" r="1.2" opacity="0.5"/>
+    <circle cx="368" cy="44"  r="1.6" opacity="0.6"/>
+    <circle cx="470" cy="92"  r="1.1" opacity="0.4"/>
+    <circle cx="612" cy="52"  r="1.7" opacity="0.65"/>
+    <circle cx="735" cy="112" r="1.2" opacity="0.45"/>
+    <circle cx="1075" cy="62" r="1.5" opacity="0.55"/>
+  </g>
+
+  <circle cx="912" cy="98" r="120" fill="url(#glow)"/>
+  <circle cx="912" cy="98" r="40"  fill="#e8f4fb"/>
+
+  <path d="M0 180 C 200 155, 380 205, 600 180 S 1000 150, 1200 178 L1200 300 L0 300 Z"
+        fill="#3a7ca5" opacity="0.40"/>
+  <path d="M0 210 C 180 236, 360 186, 580 213 S 980 241, 1200 208 L1200 300 L0 300 Z"
+        fill="#2d6485" opacity="0.60"/>
+  <path d="M0 241 C 220 216, 420 263, 640 241 S 1020 213, 1200 243 L1200 300 L0 300 Z"
+        fill="#21495f" opacity="0.80"/>
+  <path d="M0 270 C 200 289, 420 253, 660 273 S 1030 293, 1200 268 L1200 300 L0 300 Z"
+        fill="#16313f"/>
+</svg>
